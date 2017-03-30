@@ -1,0 +1,520 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="jquery-2.1.4.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script>
+
+      var val1 = document.getElementById("val1").value;
+      var val2 = document.getElementById("val2").value;
+      var val3 = document.getElementById("val3").value;
+      function CalculateWoW() {
+          document.getElementById("result").innerHTML =(document.getElementById("val1").value - document.getElementById("val2").value)/document.getElementById("val3").value;
+      }
+
+     document.getElementById("button1").onclick = function(){CalculateWoW()};
+  </script>
+</head>
+
+<style>
+  html,body
+  {
+    overflow-y:scroll;
+  }
+  td,th,tr {
+    color: white;
+  }
+  a {
+    font-weight: bold;
+    color:red;
+  }
+
+</style>
+<body>
+<div class="container">
+<div class="box" style="margin-top:10%;border:10px solid blue;padding:20px;">
+    <div class="display">
+      <div class="container">
+        <h1 style="color:red;font-size:35px;"><u>WoW Experience Calculator</u></h1>
+        <br>
+        <form onKeydown="Javascript: if (event.keyCode==13) CalculateWoW();">
+          <select id="val1" style="font-size:25px;margin:2px;border:2px solid red;">
+            <option value="f">Level</option>
+            <option value="400">1</option>
+            <option value="900">2</option>
+            <option value="1400">3</option>
+            <option value="2100">4</option>
+            <option value="2800">5</option>
+            <option value="3600">6</option>
+            <option value="4500">7</option>
+            <option value="5400">8</option>
+            <option value="6500">9</option>
+            <option value="7600">10</option>
+            <option value="8800">11</option>
+            <option value="10100">12</option>
+            <option value="11400">13</option>
+            <option value="12900">14</option>
+            <option value="14400">15</option>
+            <option value="16000">16</option>
+            <option value="17700">17</option>
+            <option value="19400">18</option>
+            <option value="21300">19</option>
+            <option value="23200">20</option>
+            <option value="25200">21</option>
+            <option value="27300">22</option>
+            <option value="29400">23</option>
+            <option value="31700">24</option>
+            <option value="34000">25</option>
+            <option value="36400">26</option>
+            <option value="38900">27</option>
+            <option value="41400">28</option>
+            <option value="44300">29</option>
+            <option value="47400">30</option>
+            <option value="50800">31</option>
+            <option value="54500">32</option>
+            <option value="58600">33</option>
+            <option value="62800">34</option>
+            <option value="67100">35</option>
+            <option value="71600">36</option>
+            <option value="76100">37</option>
+            <option value="80800">38</option>
+            <option value="85700">39</option>
+            <option value="90700">40</option>
+            <option value="95800">41</option>
+            <option value="101000">42</option>
+            <option value="106300">43</option>
+            <option value="111800">44</option>
+            <option value="117500">45</option>
+            <option value="123200">46</option>
+            <option value="129100">47</option>
+            <option value="135100">48</option>
+            <option value="141200">49</option>
+            <option value="147500">50</option>
+            <option value="153900">51</option>
+            <option value="160400">52</option>
+            <option value="167100">53</option>
+            <option value="173900">54</option>
+            <option value="180800">55</option>
+            <option value="187900">56</option>
+            <option value="195000">57</option>
+            <option value="202300">58</option>
+            <option value="209800">59</option>
+            <option value="494000">60</option>
+          </select>
+        <input type="text" size="5" placeholder="current xp" id="val2" style="font-size:25px;">
+        <input type="text" size="5" placeholder="XP per kill" id="val3" style="font-size:25px;">
+      </form>
+      <button id="button1" value="Calculate" onclick="CalculateWoW()">Calculate</button>
+
+        <br>
+        <div class="row">
+          <div class="col-xs-4">
+            <p id="result" style="color:#000;font-size:200%;background-color:#fff;text-align:center;border:5px solid green;">
+                XP req
+            </p>
+          </div>
+          <div class="col-xs-4">
+            <br>
+            <p style="color:#fff;text-align:left;"> Number of mobs you have to grind to level </p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <h1 style="color:orange;font-size:35px;"><u>Levels needed for dungeons</u></h1>
+      <div class="dungeontable">
+        <table class="collapsible wiki table darktable sortable zebra" width="100%">
+          <tr>
+          <th>Instance Name</th>
+          <th>Abbreviations</th>
+          <th>Zone</th>
+          <th>Type</th>
+          <th>Minimum Level</th>
+          <th>Recommended Level Range</th>
+          <th>Bosses</th>
+          <th>Notes</th>
+          </tr>
+          <tr>
+          <td><a href="/Ragefire_Chasm" title="Ragefire Chasm">Ragefire Chasm</a></td>
+          <td>RFC</td>
+          <td><a href="/Orgrimmar" title="Orgrimmar">Orgrimmar</a></td>
+          <td>5-man dungeon</td>
+          <td>10</td>
+          <td>15-21</td>
+          <td><a href="/Adarogg" title="Adarogg">Adarogg</a>, <a href="/Dark_Shaman_Koranthal" title="Dark Shaman Koranthal">Dark Shaman Koranthal</a>, <a href="/Slagmaw" title="Slagmaw">Slagmaw</a>, <a href="/Lava_Guard_Gordoth" title="Lava Guard Gordoth">Lava Guard Gordoth</a></td>
+          <td><small><a href="/Patch_5.0.4" title="Patch 5.0.4">Patch 5.0.4</a>: Updated</small></td>
+          </tr>
+          <tr>
+          <td><a href="/Deadmines" title="Deadmines">The Deadmines</a></td>
+          <td>VC, DM</td>
+          <td><a href="/Westfall" title="Westfall">Westfall</a></td>
+          <td>5-man dungeon</td>
+          <td>10</td>
+          <td>15-21</td>
+          <td><a href="/Glubtok" title="Glubtok">Glubtok</a>, <a href="/Helix_Gearbreaker" title="Helix Gearbreaker">Helix Gearbreaker</a>, <a href="/Foe_Reaper_5000" title="Foe Reaper 5000">Foe Reaper 5000</a>, <a href="/Admiral_Ripsnarl" title="Admiral Ripsnarl">Admiral Ripsnarl</a>, <a href="/%22Captain%22_Cookie" title="&quot;Captain&quot; Cookie">"Captain" Cookie</a><br />
+          Heroic only: <a href="/Vanessa_VanCleef_(tactics)" title="Vanessa VanCleef (tactics)">Vanessa VanCleef</a></td>
+          <td><small><a href="/Patch_4.0.3a" title="Patch 4.0.3a">Patch 4.0.3a</a>: Updated</small></td>
+          </tr>
+          <tr>
+          <td><a href="/Wailing_Caverns" title="Wailing Caverns">Wailing Caverns</a></td>
+          <td>WC</td>
+          <td><a href="/Northern_Barrens" title="Northern Barrens">Northern Barrens</a></td>
+          <td>5-man dungeon</td>
+          <td>10</td>
+          <td>15-25</td>
+          <td><a href="/Lady_Anacondra" title="Lady Anacondra">Lady Anacondra</a>, <a href="/Lord_Pythas" title="Lord Pythas">Lord Pythas</a>, <a href="/Lord_Cobrahn" title="Lord Cobrahn">Lord Cobrahn</a>, <a href="/Kresh" title="Kresh">Kresh</a>, <a href="/Skum" title="Skum">Skum</a>, <a href="/Lord_Serpentis" title="Lord Serpentis">Lord Serpentis</a>, <a href="/Verdan_the_Everliving" title="Verdan the Everliving">Verdan the Everliving</a>, <a href="/Mutanus_the_Devourer" title="Mutanus the Devourer">Mutanus the Devourer</a></td>
+          <td><small><a href="/Patch_4.1.0" title="Patch 4.1.0">Patch 4.1.0</a>: Updated</small></td>
+          </tr>
+          <tr>
+          <td><a href="/Shadowfang_Keep" title="Shadowfang Keep">Shadowfang Keep</a></td>
+          <td>SFK</td>
+          <td><a href="/Silverpine_Forest" title="Silverpine Forest">Silverpine Forest</a></td>
+          <td>5-man dungeon</td>
+          <td>11</td>
+          <td>16-26</td>
+          <td><a href="/Baron_Ashbury_(tactics)" title="Baron Ashbury (tactics)">Baron Ashbury</a>, <a href="/Baron_Silverlaine" title="Baron Silverlaine">Baron Silverlaine</a>, <a href="/Commander_Springvale" title="Commander Springvale">Commander Springvale</a>, <a href="/Lord_Walden_(tactics)" title="Lord Walden (tactics)">Lord Walden</a>, <a href="/Lord_Godfrey_(tactics)" title="Lord Godfrey (tactics)">Lord Godfrey</a></td>
+          <td><small><a href="/Patch_4.0.3a" title="Patch 4.0.3a">Patch 4.0.3a</a>: Updated</small></td>
+          </tr>
+          <tr>
+          <td><a href="/Stormwind_Stockade" title="Stormwind Stockade">Stormwind Stockade</a></td>
+          <td>Stocks, Stockade</td>
+          <td><a href="/Stormwind_City" title="Stormwind City">Stormwind City</a></td>
+          <td>5-man dungeon</td>
+          <td>15</td>
+          <td>20-30</td>
+          <td><a href="/Randolph_Moloch" title="Randolph Moloch">Randolph Moloch</a>, <a href="/Lord_Overheat" title="Lord Overheat">Lord Overheat</a>, <a href="/Hogger_(tactics)" title="Hogger (tactics)">Hogger</a></td>
+          <td><small><a href="/Patch_4.0.3a" title="Patch 4.0.3a">Patch 4.0.3a</a>: Updated</small></td>
+          </tr>
+          <tr>
+          <td><a href="/Blackfathom_Deeps" title="Blackfathom Deeps">Blackfathom Deeps</a></td>
+          <td>BFD</td>
+          <td><a href="/Ashenvale" title="Ashenvale">Ashenvale</a></td>
+          <td>5-man dungeon</td>
+          <td>15</td>
+          <td>20-30</td>
+          <td><a href="/Ghamoo-Ra" title="Ghamoo-Ra">Ghamoo-Ra</a>, <a href="/Domina" title="Domina">Domina</a>, <a href="/Subjugator_Kor%27ul" title="Subjugator Kor'ul">Subjugator Kor'ul</a>, <a href="/Thruk" title="Thruk">Thruk</a>, <a href="/Executioner_Gore" title="Executioner Gore">Executioner Gore</a>, <a href="/Guardian_of_the_Deep" title="Guardian of the Deep">Guardian of the Deep</a>, <a href="/Twilight_Lord_Bathiel" title="Twilight Lord Bathiel">Twilight Lord Bathiel</a>, <a href="/Aku%27mai_the_Devourer" title="Aku'mai the Devourer">Aku'mai the Devourer</a></td>
+          <td><small><a href="/Patch_6.0.2" title="Patch 6.0.2">Patch 6.0.2</a>: Updated</small></td>
+          </tr>
+          <tr>
+          <td><a href="/Gnomeregan" title="Gnomeregan">Gnomeregan</a></td>
+          <td>Gnomer</td>
+          <td><a href="/Dun_Morogh" title="Dun Morogh">Dun Morogh</a></td>
+          <td>5-man dungeon</td>
+          <td>19</td>
+          <td>24-34</td>
+          <td><a href="/Grubbis" title="Grubbis">Grubbis</a>, <a href="/Viscous_Fallout" title="Viscous Fallout">Viscous Fallout</a>, <a href="/Electrocutioner_6000" title="Electrocutioner 6000">Electrocutioner 6000</a>, <a href="/Crowd_Pummeler_9-60" title="Crowd Pummeler 9-60">Crowd Pummeler 9-60</a>, <a href="/Sicco_Thermaplugg" title="Sicco Thermaplugg">Mekgineer Thermaplugg</a></td>
+          <td></td>
+          </tr>
+          <tr>
+          <td><a href="/Scarlet_Halls" title="Scarlet Halls">Scarlet Halls</a></td>
+          <td>SH</td>
+          <td><a href="/Tirisfal_Glades" title="Tirisfal Glades">Tirisfal Glades</a></td>
+          <td>5-man dungeon</td>
+          <td>21</td>
+          <td>26-36</td>
+          <td><a href="/Houndmaster_Braun" title="Houndmaster Braun">Houndmaster Braun</a>, <a href="/Armsmaster_Harlan" title="Armsmaster Harlan">Armsmaster Harlan</a>, <a href="/Flameweaver_Koegler" title="Flameweaver Koegler">Flameweaver Koegler</a></td>
+          <td><small><a href="/Patch_5.0.4" title="Patch 5.0.4">Patch 5.0.4</a>: Added</small></td>
+          </tr>
+          <tr>
+          <td><a href="/Scarlet_Monastery_(instance)" title="Scarlet Monastery (instance)">Scarlet Monastery</a></td>
+          <td>SM</td>
+          <td><a href="/Tirisfal_Glades" title="Tirisfal Glades">Tirisfal Glades</a></td>
+          <td>5-man dungeon</td>
+          <td>23</td>
+          <td>28-38</td>
+          <td><a href="/Thalnos_the_Soulrender" title="Thalnos the Soulrender">Thalnos the Soulrender</a>, <a href="/Brother_Korloff" title="Brother Korloff">Brother Korloff</a>, <a href="/High_Inquisitor_Whitemane" title="High Inquisitor Whitemane">High Inquisitor Whitemane</a></td>
+          <td><small><a href="/Patch_5.0.4" title="Patch 5.0.4">Patch 5.0.4</a>: Added</small></td>
+          </tr>
+          <tr>
+          <td><a href="/Razorfen_Kraul" title="Razorfen Kraul">Razorfen Kraul</a></td>
+          <td>RFK</td>
+          <td><a href="/Southern_Barrens" title="Southern Barrens">Southern Barrens</a></td>
+          <td>5-man dungeon</td>
+          <td>25</td>
+          <td>30-40</td>
+          <td><a href="/Kraulshaper_Tukaar" title="Kraulshaper Tukaar">Kraulshaper Tukaar</a>, <a href="/Hunter_Bonetusk" title="Hunter Bonetusk">Hunter Bonetusk</a>, <a href="/Roogug" title="Roogug">Roogug</a>, <a href="/Warlord_Ramtusk" title="Warlord Ramtusk">Warlord Ramtusk</a>, <a href="/Groyat,_the_Blind_Hunter" title="Groyat, the Blind Hunter">Groyat, the Blind Hunter</a>, <a href="/Charlga_Razorflank" title="Charlga Razorflank">Charlga Razorflank</a></td>
+          <td><small><a href="/Patch_6.0.2" title="Patch 6.0.2">Patch 6.0.2</a>: Updated</small></td>
+          </tr>
+          <tr>
+          <td><a href="/Maraudon" title="Maraudon">Maraudon</a></td>
+          <td>Mara</td>
+          <td><a href="/Desolace" title="Desolace">Desolace</a></td>
+          <td>5-man dungeon</td>
+          <td>25</td>
+          <td>30-44</td>
+          <td>Wicked Grotto: <a href="/Tinkerer_Gizlock" title="Tinkerer Gizlock">Tinkerer Gizlock</a>, <a href="/Lord_Vyletongue" title="Lord Vyletongue">Lord Vyletongue</a><br />
+          Foulspore Cavern: <a href="/Noxxion" title="Noxxion">Noxxion</a>, <a href="/Razorlash" title="Razorlash">Razorlash</a><br />
+          Earth Song Falls: <a href="/Celebras_the_Cursed" title="Celebras the Cursed" class="mw-redirect">Celebras the Cursed</a>, <a href="/Landslide" title="Landslide">Landslide</a>, <a href="/Rotgrip" title="Rotgrip">Rotgrip</a>, <a href="/Princess_Theradras" title="Princess Theradras">Princess Theradras</a></td>
+          <td><small><a href="/Patch_1.2.0" title="Patch 1.2.0">Patch 1.2.0</a>: Added</small></td>
+          </tr>
+          <tr>
+          <td><a href="/Uldaman" title="Uldaman">Uldaman</a></td>
+          <td>Ulda</td>
+          <td><a href="/Badlands" title="Badlands">Badlands</a></td>
+          <td>5-man dungeon</td>
+          <td>30</td>
+          <td>35-45</td>
+          <td><a href="/Revelosh" title="Revelosh">Revelosh</a>, <a href="/Ironaya" title="Ironaya">Ironaya</a>, <a href="/Obsidian_Sentinel" title="Obsidian Sentinel">Obsidian Sentinel</a>, <a href="/Ancient_Stone_Keeper" title="Ancient Stone Keeper">Ancient Stone Keeper</a>, <a href="/Galgann_Firehammer" title="Galgann Firehammer">Galgann Firehammer</a>, <a href="/Grimlok" title="Grimlok">Grimlok</a>, <a href="/Archaedas" title="Archaedas">Archaedas</a></td>
+          <td></td>
+          </tr>
+          <tr>
+          <td><a href="/Dire_Maul" title="Dire Maul">Dire Maul</a></td>
+          <td>DM Warpwood, DM East</td>
+          <td><a href="/Feralas" title="Feralas">Feralas</a></td>
+          <td>5-man dungeon</td>
+          <td>31</td>
+          <td>36-52</td>
+          <td>Warpwood Quarter: <a href="/Lethtendris" title="Lethtendris">Lethtendris</a>, <a href="/Hydrospawn" title="Hydrospawn">Hydrospawn</a>, <a href="/Zevrim_Thornhoof" title="Zevrim Thornhoof">Zevrim Thornhoof</a>, <a href="/Alzzin_the_Wildshaper" title="Alzzin the Wildshaper">Alzzin the Wildshaper</a><br />
+          Capital Gardens: <a href="/Magister_Kalendris" title="Magister Kalendris">Magister Kalendris</a>, <a href="/Illyanna_Ravenoak" title="Illyanna Ravenoak">Illyanna Ravenoak</a>, <a href="/Tendris_Warpwood" title="Tendris Warpwood">Tendris Warpwood</a>, <a href="/Prince_Tortheldrin" title="Prince Tortheldrin">Prince Tortheldrin</a>, <a href="/Immol%27thar" title="Immol'thar">Immol'thar</a><br />
+          Gordok Commons: <a href="/Guard_Mol%27dar" title="Guard Mol'dar">Guard Mol'dar</a>, <a href="/Stomper_Kreeg" title="Stomper Kreeg">Stomper Kreeg</a>, <a href="/Guard_Fengus" title="Guard Fengus">Guard Fengus</a>, <a href="/Guard_Slip%27kik" title="Guard Slip'kik">Guard Slip'kik</a>, <a href="/Captain_Kromcrush" title="Captain Kromcrush">Captain Kromcrush</a>, <a href="/Cho%27Rush_the_Observer" title="Cho'Rush the Observer">Cho'Rush the Observer</a>, <a href="/King_Gordok" title="King Gordok">King Gordok</a></td>
+          <td><small><a href="/Patch_1.3.0" title="Patch 1.3.0">Patch 1.3.0</a>: Added</small></td>
+          </tr>
+          <tr>
+          <td><a href="/Scholomance" title="Scholomance">Scholomance</a></td>
+          <td>Scholo</td>
+          <td><a href="/Western_Plaguelands" title="Western Plaguelands">Western Plaguelands</a></td>
+          <td>5-man dungeon</td>
+          <td>33</td>
+          <td>38-48</td>
+          <td><a href="/Instructor_Chillheart" title="Instructor Chillheart">Instructor Chillheart</a>, <a href="/Jandice_Barov" title="Jandice Barov">Jandice Barov</a>, <a href="/Rattlegore" title="Rattlegore">Rattlegore</a>, <a href="/Lilian_Voss_(tactics)" title="Lilian Voss (tactics)">Lilian Voss</a>, <a href="/Darkmaster_Gandling" title="Darkmaster Gandling">Darkmaster Gandling</a></td>
+          <td><small><a href="/Patch_5.0.4" title="Patch 5.0.4">Patch 5.0.4</a>: Updated</small></td>
+          </tr>
+          <tr>
+          <td><a href="/Razorfen_Downs" title="Razorfen Downs">Razorfen Downs</a></td>
+          <td>RFD</td>
+          <td><a href="/Thousand_Needles" title="Thousand Needles">Thousand Needles</a></td>
+          <td>5-man dungeon</td>
+          <td>35</td>
+          <td>40-50</td>
+          <td><a href="/Aarux" title="Aarux">Aarux</a>, <a href="/Mordresh_Fire_Eye" title="Mordresh Fire Eye">Mordresh Fire Eye</a>, <a href="/Mushlump" title="Mushlump">Mushlump</a>, <a href="/Death_Speaker_Blackthorn" title="Death Speaker Blackthorn">Death Speaker Blackthorn</a>, <a href="/Amnennar_the_Coldbringer" title="Amnennar the Coldbringer">Amnennar the Coldbringer</a></td>
+          <td><small><a href="/Patch_6.0.2" title="Patch 6.0.2">Patch 6.0.2</a>: Updated</small></td>
+          </tr>
+          <tr>
+          <td><a href="/Stratholme" title="Stratholme">Stratholme</a></td>
+          <td>Strat</td>
+          <td><a href="/Eastern_Plaguelands" title="Eastern Plaguelands">Eastern Plaguelands</a></td>
+          <td>5-man dungeon</td>
+          <td>37</td>
+          <td>42-56</td>
+          <td>Main Gate: <a href="/The_Unforgiven" title="The Unforgiven">The Unforgiven</a>, <a href="/Hearthsinger_Forresten" title="Hearthsinger Forresten">Hearthsinger Forresten</a>, <a href="/Timmy_the_Cruel" title="Timmy the Cruel">Timmy the Cruel</a>, <a href="/Commander_Malor" title="Commander Malor">Commander Malor</a>, <a href="/Willey_Hopebreaker" title="Willey Hopebreaker">Willey Hopebreaker</a>, <a href="/Instructor_Galford" title="Instructor Galford">Instructor Galford</a>, <a href="/Balnazzar_(tactics)" title="Balnazzar (tactics)">Balnazzar</a><br />
+          Service Entrance: <a href="/Baroness_Anastari" title="Baroness Anastari">Baroness Anastari</a>, <a href="/Nerub%27enkan" title="Nerub'enkan">Nerub'enkan</a>, <a href="/Maleki_the_Pallid" title="Maleki the Pallid">Maleki the Pallid</a>, <a href="/Magistrate_Barthilas" title="Magistrate Barthilas">Magistrate Barthilas</a>, <a href="/Ramstein_the_Gorger" title="Ramstein the Gorger">Ramstein the Gorger</a>, <a href="/Lord_Aurius_Rivendare" title="Lord Aurius Rivendare">Lord Aurius Rivendare</a></td>
+          <td></td>
+          </tr>
+          <tr>
+          <td><a href="/Zul%27Farrak" title="Zul'Farrak">Zul'Farrak</a></td>
+          <td>ZF</td>
+          <td><a href="/Tanaris" title="Tanaris">Tanaris</a></td>
+          <td>5-man dungeon</td>
+          <td>39</td>
+          <td>44-54</td>
+          <td><a href="/Hydromancer_Velratha" title="Hydromancer Velratha">Hydromancer Velratha</a>, <a href="/Gahz%27rilla" title="Gahz'rilla">Gahz'rilla</a>, <a href="/Antu%27sul" title="Antu'sul">Antu'sul</a>, <a href="/Theka_the_Martyr" title="Theka the Martyr">Theka the Martyr</a>, <a href="/Witch_Doctor_Zum%27rah" title="Witch Doctor Zum'rah">Witch Doctor Zum'rah</a>, <a href="/Nekrum_Gutchewer" title="Nekrum Gutchewer">Nekrum Gutchewer</a>, <a href="/Shadowpriest_Sezz%27ziz" title="Shadowpriest Sezz'ziz">Shadowpriest Sezz'ziz</a>, <a href="/Chief_Ukorz_Sandscalp" title="Chief Ukorz Sandscalp">Chief Ukorz Sandscalp</a></td>
+          <td></td>
+          </tr>
+          <tr>
+          <td><a href="/Blackrock_Depths" title="Blackrock Depths">Blackrock Depths</a></td>
+          <td>BRD</td>
+          <td><a href="/Blackrock_Mountain" title="Blackrock Mountain">Blackrock Mountain</a></td>
+          <td>5-man dungeon</td>
+          <td>42</td>
+          <td>47-60</td>
+          <td>Detention Block: <a href="/Bael%27Gar" title="Bael'Gar">Bael'Gar</a>, <a href="/High_Interrogator_Gerstahn" title="High Interrogator Gerstahn">High Interrogator Gerstahn</a>, <a href="/Lord_Roccor" title="Lord Roccor">Lord Roccor</a>, <a href="/Houndmaster_Grebmar" title="Houndmaster Grebmar">Houndmaster Grebmar</a>, <a href="/Ring_of_Law" title="Ring of Law">Ring of Law</a><br />
+          Upper City: <a href="/Pyromancer_Loregrain" title="Pyromancer Loregrain">Pyromancer Loregrain</a>, <a href="/Warder_Stilgiss" title="Warder Stilgiss">Warder Stilgiss</a>, <a href="/Fineous_Darkvire" title="Fineous Darkvire">Fineous Darkvire</a>, <a href="/Lord_Incendius" title="Lord Incendius">Lord Incendius</a>, <a href="/General_Angerforge" title="General Angerforge">General Angerforge</a>, <a href="/Golem_Lord_Argelmach" title="Golem Lord Argelmach">Golem Lord Argelmach</a>, <a href="/Hurley_Blackbreath" title="Hurley Blackbreath">Hurley Blackbreath</a>, <a href="/Ribbly_Screwspigot" title="Ribbly Screwspigot">Ribbly Screwspigot</a>, <a href="/Phalanx" title="Phalanx">Phalanx</a>, <a href="/Plugger_Spazzring" title="Plugger Spazzring">Plugger Spazzring</a>, <a href="/Ambassador_Flamelash" title="Ambassador Flamelash">Ambassador Flamelash</a>, <a href="/The_Seven" title="The Seven">The Seven</a>, <a href="/Magmus" title="Magmus">Magmus</a>, <a href="/Emperor_Dagran_Thaurissan" title="Emperor Dagran Thaurissan" class="mw-redirect">Emperor Dagran Thaurissan</a></td>
+          <td></td>
+          </tr>
+          <tr>
+          <td><a href="/Temple_of_Atal%27Hakkar" title="Temple of Atal'Hakkar">Sunken Temple</a></td>
+          <td>ST, AH</td>
+          <td><a href="/Swamp_of_Sorrows" title="Swamp of Sorrows">Swamp of Sorrows</a></td>
+          <td>5-man dungeon</td>
+          <td>45</td>
+          <td>50-60</td>
+          <td><a href="/Avatar_of_Hakkar" title="Avatar of Hakkar">Avatar of Hakkar</a>, <a href="/Jammal%27an_the_Prophet" title="Jammal'an the Prophet">Jammal'an the Prophet</a>, <a href="/Wardens_of_the_Dream" title="Wardens of the Dream">Wardens of the Dream</a>, <a href="/Shade_of_Eranikus" title="Shade of Eranikus">Shade of Eranikus</a></td>
+          <td></td>
+          </tr>
+          <tr>
+          <td><a href="/Lower_Blackrock_Spire" title="Lower Blackrock Spire">Lower Blackrock Spire</a></td>
+          <td>LBRS</td>
+          <td><a href="/Blackrock_Mountain" title="Blackrock Mountain">Blackrock Mountain</a></td>
+          <td>5-man dungeon</td>
+          <td>48</td>
+          <td>55-65</td>
+          <td><a href="/Highlord_Omokk" title="Highlord Omokk">Highlord Omokk</a>, <a href="/Shadow_Hunter_Vosh%27gajin" title="Shadow Hunter Vosh'gajin">Shadow Hunter Vosh'gajin</a>, <a href="/War_Master_Voone" title="War Master Voone">War Master Voone</a>, <a href="/Mother_Smolderweb" title="Mother Smolderweb">Mother Smolderweb</a>, <a href="/Urok_Doomhowl" title="Urok Doomhowl">Urok Doomhowl</a>, <a href="/Quartermaster_Zigris" title="Quartermaster Zigris">Quartermaster Zigris</a>, <a href="/Halycon" title="Halycon">Halycon</a>, <a href="/Gizrul_the_Slavener" title="Gizrul the Slavener">Gizrul the Slavener</a>, <a href="/Overlord_Wyrmthalak" title="Overlord Wyrmthalak">Overlord Wyrmthalak</a></td>
+          <td></td>
+          </tr>
+          <tr>
+          <td><a href="/Upper_Blackrock_Spire" title="Upper Blackrock Spire">Upper Blackrock Spire</a></td>
+          <td>UBRS</td>
+          <td><a href="/Blackrock_Mountain" title="Blackrock Mountain">Blackrock Mountain</a></td>
+          <td>5-man dungeon</td>
+          <td>48</td>
+          <td>55-65</td>
+          <td><a href="/Pyroguard_Emberseer" title="Pyroguard Emberseer">Pyroguard Emberseer</a>, <a href="/Solakar_Flamewreath" title="Solakar Flamewreath">Solakar Flamewreath</a>, <a href="/Warchief_Rend_Blackhand" title="Warchief Rend Blackhand" class="mw-redirect">Warchief Rend Blackhand</a>, <a href="/The_Beast" title="The Beast">The Beast</a>, <a href="/General_Drakkisath" title="General Drakkisath">General Drakkisath</a></td>
+          <td><small><a href="/Patch_6.0.2" title="Patch 6.0.2">Patch 6.0.2</a>: Updated</small></td>
+          </tr>
+          <tr>
+          <td><a href="/Ruins_of_Ahn%27Qiraj" title="Ruins of Ahn'Qiraj">Ruins of Ahn'Qiraj</a></td>
+          <td>AQ10, RAQ</td>
+          <td><a href="/Ahn%27Qiraj:_The_Fallen_Kingdom" title="Ahn'Qiraj: The Fallen Kingdom">Ahn'Qiraj: The Fallen Kingdom</a></td>
+          <td>10-man raid</td>
+          <td>50</td>
+          <td>60+</td>
+          <td><a href="/Kurinnaxx" title="Kurinnaxx">Kurinnaxx</a>, <a href="/General_Rajaxx" title="General Rajaxx">General Rajaxx</a>, <a href="/Moam" title="Moam">Moam</a>, <a href="/Buru_the_Gorger" title="Buru the Gorger">Buru the Gorger</a>, <a href="/Ayamiss_the_Hunter" title="Ayamiss the Hunter">Ayamiss the Hunter</a>, <a href="/Ossirian_the_Unscarred" title="Ossirian the Unscarred">Ossirian the Unscarred</a></td>
+          <td><small><a href="/Patch_1.9.0" title="Patch 1.9.0">Patch 1.9.0</a>: Added</small></td>
+          </tr>
+          <tr>
+          <td><a href="/Molten_Core" title="Molten Core">Molten Core</a></td>
+          <td>MC</td>
+          <td><a href="/Blackrock_Mountain" title="Blackrock Mountain">Blackrock Mountain</a></td>
+          <td>40-man raid</td>
+          <td>50</td>
+          <td>60+</td>
+          <td><a href="/Lucifron" title="Lucifron">Lucifron</a>, <a href="/Magmadar" title="Magmadar">Magmadar</a>, <a href="/Gehennas" title="Gehennas">Gehennas</a>, <a href="/Garr" title="Garr">Garr</a>, <a href="/Shazzrah" title="Shazzrah">Shazzrah</a>, <a href="/Baron_Geddon" title="Baron Geddon">Baron Geddon</a>, <a href="/Sulfuron_Harbinger" title="Sulfuron Harbinger">Sulfuron Harbinger</a>, <a href="/Golemagg_the_Incinerator" title="Golemagg the Incinerator">Golemagg the Incinerator</a>, <a href="/Majordomo_Executus" title="Majordomo Executus">Majordomo Executus</a>, <a href="/Ragnaros_(tactics)" title="Ragnaros (tactics)">Ragnaros</a></td>
+          <td></td>
+          </tr>
+          <tr>
+          <td><a href="/Blackwing_Lair" title="Blackwing Lair">Blackwing Lair</a></td>
+          <td>BWL</td>
+          <td><a href="/Blackrock_Mountain" title="Blackrock Mountain">Blackrock Mountain</a></td>
+          <td>40-man raid</td>
+          <td>55</td>
+          <td>60+</td>
+          <td><a href="/Razorgore_the_Untamed" title="Razorgore the Untamed">Razorgore the Untamed</a>, <a href="/Vaelastrasz" title="Vaelastrasz">Vaelastrasz</a>, <a href="/Broodlord_Lashlayer" title="Broodlord Lashlayer">Broodlord Lashlayer</a>, <a href="/Firemaw" title="Firemaw">Firemaw</a>, <a href="/Ebonroc" title="Ebonroc">Ebonroc</a>, <a href="/Flamegor" title="Flamegor">Flamegor</a>, <a href="/Chromaggus" title="Chromaggus">Chromaggus</a>, <a href="/Nefarian_(tactics)" title="Nefarian (tactics)">Nefarian</a></td>
+          <td><small><a href="/Patch_1.6.0" title="Patch 1.6.0">Patch 1.6.0</a>: Added</small></td>
+          </tr>
+          <tr>
+          <td><a href="/Temple_of_Ahn%27Qiraj" title="Temple of Ahn'Qiraj">Temple of Ahn'Qiraj</a></td>
+          <td>AQ40, TAQ</td>
+          <td><a href="/Ahn%27Qiraj:_The_Fallen_Kingdom" title="Ahn'Qiraj: The Fallen Kingdom">Ahn'Qiraj: The Fallen Kingdom</a></td>
+          <td>40-man raid</td>
+          <td>50</td>
+          <td>60+</td>
+          <td><a href="/The_Prophet_Skeram" title="The Prophet Skeram">The Prophet Skeram</a>, <a href="/Silithid_Royalty" title="Silithid Royalty">Silithid Royalty</a>, <a href="/Battleguard_Sartura" title="Battleguard Sartura">Battleguard Sartura</a>, <a href="/Fankriss_the_Unyielding" title="Fankriss the Unyielding">Fankriss the Unyielding</a>, <a href="/Viscidus" title="Viscidus">Viscidus</a>, <a href="/Princess_Huhuran" title="Princess Huhuran">Princess Huhuran</a>, <a href="/Twin_Emperors" title="Twin Emperors">Twin Emperors</a>, <a href="/Ouro" title="Ouro">Ouro</a>, <a href="/C%27Thun_(tactics)" title="C'Thun (tactics)">C'Thun</a></td>
+          <td><small><a href="/Patch_1.9.0" title="Patch 1.9.0">Patch 1.9.0</a>: Added</small></td>
+          </tr>
+          </table>
+          <p><br />
+          Level requirements taken from <a target="_self" rel="nofollow" class="external free" href="http://us.battle.net/wow/en/forum/topic/1127129847?page=1#1">http://us.battle.net/wow/en/forum/topic/1127129847?page=1#1</a></p>
+          <h2><span class="mw-headline" id="See_also">See also</span></h2>
+          <ul>
+          <li><a href="/Instances_by_continent" title="Instances by continent">Instances by continent</a></li>
+          <li><a href="/Zones_by_level" title="Zones by level">Zones by level</a></li>
+          </ul>
+          <table cellspacing="0" class="navbox" style="border-spacing:0;;">
+          <tr>
+          <td style="padding:2px;">
+          <table cellspacing="0" class="nowraplinks mw-collapsible mw-uncollapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit;;">
+          <tr>
+          <th scope="col" style=";" class="navbox-title" colspan="2">
+          <div class="noprint plainlinks hlist navbar mini" style="">
+          <ul>
+          <li class="nv-view"><a href="/Template:Dungeons" title="Template:Dungeons"><span title="View this template" style=";;background:none transparent;border:none;">v</span></a></li>
+          <li class="nv-edit"><a target="_self" class="external text" href="//wow.gamepedia.com/index.php?title=Template:Dungeons&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;">e</span></a></li>
+          </ul>
+          </div>
+          <div class="" style="font-size:110%;"><a href="/Instance" title="Instance">Instanced dungeon</a> locations</div>
+          </th>
+          </tr>
+          <tr style="height:2px;">
+          <td></td>
+          </tr>
+          <tr>
+          <td class="navbox-abovebelow" style=";" colspan="2">
+          <div><a href="/Instance_portal" title="Instance portal">Instance portal</a><span style="font-weight:bold;">&#160;·</span> <a href="/Instance_limitations" title="Instance limitations">Instance limitations</a><span style="font-weight:bold;">&#160;·</span> <a href="/Instances_by_level" title="Instances by level">Instances by level</a><span style="font-weight:bold;">&#160;·</span> <a href="/Instance_attunement" title="Instance attunement">Instance attunement</a><span style="font-weight:bold;">&#160;·</span> <a href="/Instances_by_continent" title="Instances by continent">Instances by continent</a></div>
+          </td>
+          </tr>
+          <tr style="height:2px;">
+          <td></td>
+          </tr>
+          <tr>
+          <td colspan="2" style="width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist">
+          <div style="padding:0em 0.25em"></div>
+          <table cellspacing="0" class="nowraplinks mw-collapsible mw-uncollapsed navbox-subgroup" style="border-spacing:0;;;;">
+          <tr>
+          <th scope="col" style=";" class="navbox-title" colspan="2"><span style="float:left;width:6em;">&#160;</span>
+          <div class="" style="font-size:110%;">World of Warcraft <a href="/World_of_Warcraft" title="World of Warcraft"><img alt="WoW Icon 16x16.png" src="https://hydra-media.cursecdn.com/wow.gamepedia.com/d/d9/WoW_Icon_16x16.png?version=65de07b393773857c1609ff74f39e560" width="16" height="16" /></a></div>
+          </th>
+          </tr>
+          <tr style="height:2px;">
+          <td></td>
+          </tr>
+          <tr>
+          <th scope="row" class="navbox-group" style=";;"><a href="/Eastern_Kingdoms" title="Eastern Kingdoms">Eastern Kingdoms</a></th>
+          <td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd hlist">
+          <div style="padding:0em 0.25em">
+          <ul>
+          <li><a href="/Blackrock_Mountain" title="Blackrock Mountain">Blackrock Mountain</a>
+          <ul>
+          <li><a href="/Blackrock_Depths" title="Blackrock Depths">Blackrock Depths</a></li>
+          <li><a href="/Lower_Blackrock_Spire" title="Lower Blackrock Spire">Lower Blackrock Spire</a></li>
+          <li><a href="/Molten_Core" title="Molten Core">Molten Core</a></li>
+          <li><a href="/Blackwing_Lair" title="Blackwing Lair">Blackwing Lair</a></li>
+          </ul>
+          </li>
+          <li><a href="/Deadmines" title="Deadmines">Deadmines</a></li>
+          <li><a href="/Gnomeregan" title="Gnomeregan">Gnomeregan</a></li>
+          <li><a href="/Scarlet_Monastery" title="Scarlet Monastery">Scarlet Monastery</a>
+          <ul>
+          <li><a href="/Scarlet_Halls" title="Scarlet Halls">Scarlet Halls</a></li>
+          <li><a href="/Scarlet_Monastery_(instance)" title="Scarlet Monastery (instance)">Monastery</a></li>
+          </ul>
+          </li>
+          <li><a href="/Scholomance" title="Scholomance">Scholomance</a></li>
+          <li><a href="/Shadowfang_Keep" title="Shadowfang Keep">Shadowfang Keep</a></li>
+          <li><a href="/Stormwind_Stockade" title="Stormwind Stockade">Stormwind Stockade</a></li>
+          <li><a href="/Stratholme" title="Stratholme">Stratholme</a>
+          <ul>
+          <li><a href="/Stratholme_Main_Gate" title="Stratholme Main Gate">Main Gate</a></li>
+          <li><a href="/Stratholme_Service_Entrance" title="Stratholme Service Entrance">Service Entrance</a></li>
+          </ul>
+          </li>
+          <li><a href="/Temple_of_Atal%27Hakkar" title="Temple of Atal'Hakkar">Temple of Atal'Hakkar</a></li>
+          <li><a href="/Uldaman" title="Uldaman">Uldaman</a></li>
+          </ul>
+          </div>
+          </td>
+          </tr>
+          <tr style="height:2px">
+          <td></td>
+          </tr>
+          <tr>
+          <th scope="row" class="navbox-group" style=";;"><a href="/Kalimdor" title="Kalimdor">Kalimdor</a></th>
+          <td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even hlist">
+          <div style="padding:0em 0.25em">
+          <ul>
+          <li><a href="/Ahn%27Qiraj" title="Ahn'Qiraj">Ahn'Qiraj</a>
+          <ul>
+          <li><a href="/Ruins_of_Ahn%27Qiraj" title="Ruins of Ahn'Qiraj">Ruins of Ahn'Qiraj</a></li>
+          <li><a href="/Temple_of_Ahn%27Qiraj" title="Temple of Ahn'Qiraj">Temple of Ahn'Qiraj</a></li>
+          </ul>
+          </li>
+          <li><a href="/Blackfathom_Deeps" title="Blackfathom Deeps">Blackfathom Deeps</a></li>
+          <li><a href="/Dire_Maul" title="Dire Maul">Dire Maul</a></li>
+          <li><a href="/Maraudon" title="Maraudon">Maraudon</a></li>
+          <li><a href="/Ragefire_Chasm" title="Ragefire Chasm">Ragefire Chasm</a></li>
+          <li><a href="/Razorfen" title="Razorfen">Razorfen</a>
+          <ul>
+          <li><a href="/Razorfen_Kraul" title="Razorfen Kraul">Razorfen Kraul</a></li>
+          <li><a href="/Razorfen_Downs" title="Razorfen Downs">Razorfen Downs</a></li>
+          </ul>
+          </li>
+          <li><a href="/Wailing_Caverns" title="Wailing Caverns">Wailing Caverns</a></li>
+          <li><a href="/Zul%27Farrak" title="Zul'Farrak">Zul'Farrak</a></li>
+          </ul>
+          </div>
+          </td>
+          </tr>
+          </table>
+      </div>
+    </div>
+</div>
+
+</div>
+
+</body>
+
+
+</html>

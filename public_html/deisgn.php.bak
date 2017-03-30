@@ -1,0 +1,50 @@
+<?php
+	include("check.php");
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='shortcut icon' href='http://epicloot.us/favicon.png' type='image/x-icon'/ >
+    <title>Design</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="jquery-2.1.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+    <script type="text/javascript">$(document).ready( function() { $('div.index-right').eq(0).append($('div#my-content')); setInterval(function(){ var iframe1 = $('iframe#iframe-1'); iframe1.attr('src', iframe1.attr('src')); }, 300000); });</script>
+	<style>
+	.bg-info{
+		border: 2px solid black;
+		border-radius: 5px;
+		font-size: 20px;
+	}
+	</style>
+</head>
+
+<body>
+<div class="container">
+	<div class="jumbotron">
+		<h1>See what EpicLoot can make for you!</h1>
+		<br><br><br>
+		<h2>EpicLoot offers WebDesign as well as Graphic Design</h2>
+	</div>
+	<div class="bg-info">
+	<div class="jumbotron">
+	<div class="graphicd">
+	<dl> 
+	<dt><h3>WebDesign</h3></dt>
+	<h4><dd>- highly customizable to meet your exact needs</dd></h4>
+	<h4><dd>- add pictures, videos, and even sound</dd></h4>
+	<h4><dd>- add apps, mobile sites, email, storage and more</dd></h4>
+	<h3><dt>Grahpic Design</dt></h3>
+	<h4><dd>- Proffessional pohotography</dd></h4>
+	<h4><dd>- Photoshop any picture</dd></h4>
+	<h4><dd>- Develop a professional Logo for your company</dd></h4>
+	</dl>
+	</div>
+	</div>
+	</div>
+</div>
+</body>
+</html>
